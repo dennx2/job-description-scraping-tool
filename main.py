@@ -17,6 +17,9 @@ def main():
     for key in data.keys():
         if key in url:
             subprocess.call(["python", f"scripts\{data[key]}", url])
+            break
+    else:
+        print("Entered url is not supported")
 
 if __name__ == "__main__":
     main()

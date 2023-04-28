@@ -3,7 +3,8 @@ import json
 import re
 import os
 
-def scrape_rbc(url = "https://jobs.rbc.com/ca/en/job/R-0000048184/Senior-Data-Engineer"):
+# test url = "https://jobs.rbc.com/ca/en/job/R-0000048184/Senior-Data-Engineer"
+def scrape_rbc(url):
 
     desc_cleaned = ""
     job_url = ""
@@ -51,7 +52,7 @@ def scrape_rbc(url = "https://jobs.rbc.com/ca/en/job/R-0000048184/Senior-Data-En
             # print(application_deadline)
 
     # Create the organization's folder if not exist
-    folder_path = f"c-{hiringOrganization}"
+    folder_path = f"output/{hiringOrganization}"
     if not os.path.exists(folder_path):
         os.makedirs(folder_path)
 
