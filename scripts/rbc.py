@@ -2,8 +2,8 @@ import urllib.request
 import json
 import re
 import os
+import sys
 
-# test url = "https://jobs.rbc.com/ca/en/job/R-0000048184/Senior-Data-Engineer"
 def scrape_rbc(url):
 
     desc_cleaned = ""
@@ -73,4 +73,5 @@ def scrape_rbc(url):
     print("File created")
 
 if __name__ == "__main__":
-    scrape_rbc()
+    # scrape_rbc(url = "https://jobs.rbc.com/ca/en/job/RBCAA0088R0000054371EXTERNALENCA/Sr-Data-Engineer")
+    scrape_rbc(sys.argv[1])
