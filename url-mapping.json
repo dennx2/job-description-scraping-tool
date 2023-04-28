@@ -1,0 +1,6 @@
+{
+    "jobs.rbc.com/ca/en/job": "rbc.py",
+    "jobs.bmo.com/ca/en/job": "bmo.py",
+    "cibc.wd3.myworkdayjobs.com": "cibc.py",
+    "jobs.td.com/en-CA/jobs": "td.py"
+}
