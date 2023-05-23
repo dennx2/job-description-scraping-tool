@@ -31,11 +31,11 @@ def scrape_rbc(url):
             # Use non-greedy regex to remove html tags
             desc_cleaned = re.sub(r'&lt;.*?&gt;', ' ', match)
             application_deadline = re.findall("Application Deadline:.*?(\d{4}-\d{2}-\d{2})", desc_cleaned)[0]
-            # print(cleaned_desc[600:1200])
+            # print(desc_cleaned[600:1200])
 
             # Transform into JSON object
             json_desc = json.loads(desc_cleaned)
-            job_url = json_desc.keys()
+            # job_attr = json_desc.keys()
 
             job_url = json_desc['hiringOrganization']['url']
             job_title = json_desc['title']
@@ -45,7 +45,7 @@ def scrape_rbc(url):
             skills = json_desc['skills'] 
             hiringOrganization = json_desc['hiringOrganization']['name']   
 
-            # print(job_url)
+            # print(job_attr)
             # print(job_title, job_id)
             # print(type(json_desc['description']))
             # print(json_desc['description'])
